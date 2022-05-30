@@ -1,6 +1,6 @@
 const express = require("express");
 const connectDB = require("./database");
-const morgan = require("morgan");
+//const morgan = require("morgan");
 const cors = require("cors");
 const { readdirSync } = require("fs");
 require("dotenv").config();
