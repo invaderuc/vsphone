@@ -16,7 +16,7 @@ const app = express();
 connectDB();
 
 // middlewares
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
 app.use(express.json({ limit: "2mb" }));
 
 const swaggerJsdocs = swaggerJsdoc(swaggerConfig);
