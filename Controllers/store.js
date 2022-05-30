@@ -25,7 +25,6 @@ exports.listAll = async (req, res) => {
   res.json(stores);
 };
 
-
 exports.storesCount = async (req, res) => {
   let total = await Store.find({ status: "Active" }).estimatedDocumentCount().exec();
   res.json(total);
