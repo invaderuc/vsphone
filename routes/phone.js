@@ -3,6 +3,8 @@ const router = express.Router();
 
 // middlewares
 const { authCheck, adminCheck } = require("../middlewares/auth");
+// middlewares validators
+const { validateCreatePhone } = require("../validators/phone");
 
 const { create, list, read, update, remove, removeSoft,listAll,phonesCount,listRelated,searchFilters } = require("../Controllers/phone");
 
@@ -146,7 +148,7 @@ const { create, list, read, update, remove, removeSoft,listAll,phonesCount,listR
  */
 
 // endpoints
-router.post("/phone", create);
+router.post("/phone", validateCreatePhone, create);
 router.get("/phone/:slug", read);
 router.put("/phone/:slug", update);
 router.patch("/product/:slug", authCheck, adminCheck, removeSoft);
