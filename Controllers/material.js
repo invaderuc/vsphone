@@ -16,7 +16,6 @@ exports.create = async (req, res) => {
     });
   }
 };
-
 exports.listAll = async (req, res) => {
   let materials = await Material.find({ status: "Active" })
     .limit(parseInt(req.params.count))
