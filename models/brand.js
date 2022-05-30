@@ -7,7 +7,7 @@ const brandSchema = new mongoose.Schema(
       trim: true,
       required: "Nombre requerido",
       minlength: [2, "Too short"],
-      maxlength: [32, "Muy largo"],
+      maxlength: [32, "too large"],
     },
     slug: {
       type: String,
